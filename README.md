@@ -1,2 +1,1 @@
-# smirk
-Yet another GRIN
+# smirk-lib
