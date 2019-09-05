@@ -4,13 +4,13 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e74ac7841f2753374edcb9c7e387c5d0080b9f4ac9dd84fb8132865e1f5e2bf1
+-- hash: be9543d22fe10fda662d74b5150f133c1c48eb9a1edc9fd7649739febe5faa40
 
-name:           smirk-lib
+name:           smirk
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/farre/smirk-lib#readme>
-homepage:       https://github.com/farre/smirk-lib#readme
-bug-reports:    https://github.com/farre/smirk-lib/issues
+description:    Please see the README on GitHub at <https://github.com/farre/smirk#readme>
+homepage:       https://github.com/farre/smirk#readme
+bug-reports:    https://github.com/farre/smirk/issues
 author:         Andreas Farre
 maintainer:     andreas@farre.se
 copyright:      2019 Andreas Farre
@@ -23,42 +23,51 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/farre/smirk-lib
+  location: https://github.com/farre/smirk
 
 library
   exposed-modules:
       Smirk
+      Smirk.Compiler
+      Smirk.Context
+      Smirk.Core
+      Smirk.Language
+      Smirk.Pretty
+      Smirk.Syntax
   other-modules:
-      Paths_smirk_lib
+      Paths_smirk
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+    , containers
     , mtl
     , operational
+    , polyvariadic ==0.3.0.3
+    , pretty
   default-language: Haskell2010
 
-executable smirk-lib-exe
+executable smirk-exe
   main-is: Main.hs
   other-modules:
-      Paths_smirk_lib
+      Paths_smirk
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , smirk-lib
+    , smirk
   default-language: Haskell2010
 
-test-suite smirk-lib-test
+test-suite smirk-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_smirk_lib
+      Paths_smirk
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , smirk-lib
+    , smirk
   default-language: Haskell2010

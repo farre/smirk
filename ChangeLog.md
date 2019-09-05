@@ -1,3 +1,3 @@
-# Changelog for smirk-lib
+# Changelog for smirk
 
 ## Unreleased changes
