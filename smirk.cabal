@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.1.
+-- This file has been generated from package.yaml by hpack version 0.31.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: be9543d22fe10fda662d74b5150f133c1c48eb9a1edc9fd7649739febe5faa40
+-- hash: 735cdc4c76470672dfe1f7afb4acd5fb2b8eb8642401739b616e9cd2067071cb
 
 name:           smirk
 version:        0.1.0.0
@@ -31,6 +31,8 @@ library
       Smirk.Compiler
       Smirk.Context
       Smirk.Core
+      Smirk.Error
+      Smirk.Interpreter
       Smirk.Language
       Smirk.Pretty
       Smirk.Syntax
